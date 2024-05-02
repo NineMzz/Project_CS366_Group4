@@ -1,10 +1,10 @@
-package service;
+package com.example.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KafkaProducerApplicationTests {
+class Testmicroservice1ApplicationTests {
 
 	@Test
 	void contextLoads() {
