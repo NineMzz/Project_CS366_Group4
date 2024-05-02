@@ -25,9 +25,14 @@ public class BookService {
         return repo.findById(id);
     }
 
+    public List<Book> findByStatus(String status) {
+        return repo.findByStatus(status);
+    }
+    
     // Method to save a book into the database
     public Book save(Book book) {
         return repo.save(book);
     }
 
+    
 }

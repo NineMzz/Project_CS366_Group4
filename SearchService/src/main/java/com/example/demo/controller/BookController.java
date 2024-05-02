@@ -42,7 +42,18 @@ public class BookController {
     public Optional<Book> getBookById(@PathVariable("id") Integer id) {
         return service.findById(id);
     }
-    
+
+    //localhost:8080/api/books/status?status=Available
+    @GetMapping("/books/status")
+    public ResponseEntity<List<Book>> getBooksByStatus(@RequestParam("status") String status) {
+    List<Book> books = service.findByStatus(status);
+    if (!books.isEmpty()) {
+        return new ResponseEntity<>(books, HttpStatus.OK);
+    } else {
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+}
+
     // Endpoint to create a new book
     // http://localhost:8080/api/books
     @PostMapping("/books")
