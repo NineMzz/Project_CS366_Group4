@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 
 @Entity
-@Table(name="BookStatus")  // Changed to match your table name for books
+@Table(name="book_status")  // Changed to match your table name for books
 public class Book {
 
     @Id
@@ -17,7 +17,6 @@ public class Book {
 
     @Column(nullable = false)  // Assuming title must be non-null
     private String title;
-
     private String category;
     private String status;
 
